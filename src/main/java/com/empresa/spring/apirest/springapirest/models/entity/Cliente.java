@@ -1,5 +1,6 @@
 package com.empresa.spring.apirest.springapirest.models.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -7,11 +8,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 
 @Data
 @Document
-public class Cliente implements Serializable {
+public class Cliente<C> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -20,6 +20,7 @@ public class Cliente implements Serializable {
     private String apellido;
     @Indexed(unique = true)
     private String email;
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS]")
     private LocalDateTime createAt;
 
     public Cliente(String nombre, String apellido, String email, LocalDateTime createAt) {

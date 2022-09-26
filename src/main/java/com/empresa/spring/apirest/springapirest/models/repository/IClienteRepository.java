@@ -5,8 +5,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
 
-public interface IClienteRepository
-        extends MongoRepository<Cliente, String> {
+public interface IClienteRepository extends MongoRepository<Cliente, String> {
 
     Optional<Cliente> findClienteByEmail(String email);
 

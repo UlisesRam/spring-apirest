@@ -35,3 +35,11 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Untracked files: ###
+.tmp/
+caches/
+daemon/
+data/
+native/
+wrapper/

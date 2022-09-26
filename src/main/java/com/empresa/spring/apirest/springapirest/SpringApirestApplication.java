@@ -11,10 +11,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class SpringApirestApplication {
@@ -27,8 +24,8 @@ public class SpringApirestApplication {
     CommandLineRunner runner (IClienteRepository repository, MongoTemplate mongoTemplate){
         return args -> {
 
-            String email = "ulises@mail.com";
-            Cliente cliente = new Cliente("Ulises","Ramirez", email, LocalDateTime.now());
+            String email = "fab1@mail.com";
+            Cliente cliente = new Cliente("Fabian","Ramirez", email, LocalDateTime.now());
 
             // usingMongoTemplateAndQuery(repository, mongoTemplate, email, cliente);
 

@@ -24,8 +24,8 @@ public class SpringApirestApplication {
     CommandLineRunner runner (IClienteRepository repository, MongoTemplate mongoTemplate){
         return args -> {
 
-            String email = "fab1@mail.com";
-            Cliente cliente = new Cliente("Fabian","Ramirez", email, LocalDateTime.now());
+            String email = "fab2@mail.com";
+            Cliente cliente = new Cliente("Fabian2","Ramirez", email, LocalDateTime.now());
 
             // usingMongoTemplateAndQuery(repository, mongoTemplate, email, cliente);
 
